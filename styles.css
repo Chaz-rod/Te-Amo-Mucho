@@ -1,5 +1,5 @@
 body {
-  background-image: url('imagenes/seamless-pattern-with-blue-hearts-on-white-background-image-vector.jpg'); /* Cambia el nombre según tu imagen */
+  background-image: url('imagenes/seamless-pattern-with-blue-hearts-on-white-background-image-vector.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -8,13 +8,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .inicio-contenido {
   display: flex;
   flex-direction: column;
   align-items: center; /* Alinea el h1 y el botón al centro */
 }
+
 #btn-empezar {
-  align-items: center;
   padding: 15px 30px;
   font-size: 18px;
   background-color: #ff69b4;
@@ -26,14 +27,17 @@ body {
   transition: background-color 0.3s ease;
   margin-top: 20px;
 }
-h1{
+
+h1 {
   text-align: center;
 }
-.subtitulo{
+
+.subtitulo {
   text-align: center;
   margin-top: 10px;
   font-size: 10px;
 }
+
 .contenedor {
   margin-top: 260px;
   display: flex;
@@ -45,15 +49,15 @@ h1{
   box-sizing: border-box;
 }
 
-.lado.derecho{
-  margin-top:160px;
+.lado.derecho {
+  margin-top: 160px;
   width: 150px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
 }
+
 .columna-imagenes {
   display: flex;
   flex-direction: column; /* apila verticalmente */
@@ -67,19 +71,18 @@ h1{
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-.lado.izquierdo{
 
-  margin-top:90px;
+.lado.izquierdo {
+  margin-top: 90px;
   width: 150px;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
 }
 
 .texto-centro {
-  margin-top: 200;
+  margin-top: 200px;  /* corregido */
   max-width: 500px;
   text-align: center;
   background-color: white;
@@ -88,4 +91,27 @@ h1{
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    margin-top: 100px;
+    height: auto;
+  }
 
+  .columna-imagenes {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .lado, .lado.derecho, .lado.izquierdo {
+    margin-top: 0;
+    width: 100px;
+  }
+
+  .texto-centro {
+    margin-top: 20px;
+    max-width: 90%;
+    padding: 15px;
+  }
+}
