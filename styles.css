@@ -152,6 +152,7 @@ h1 {
     padding: 10px;            /* Espacio interno alrededor del texto */
     border-radius: 8px;       /* Bordes redondeados (opcional) */
     display: inline-block;
+    justify-content: center;
 
   }
 }
